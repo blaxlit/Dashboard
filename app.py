@@ -23,3 +23,9 @@ with col2:
     type_counts = filtered_df.groupby('Activity_Type').size().reset_index(name='Count')
     fig_pie = px.pie(type_counts, names='Activity_Type', values='Count', title="Activity Type Ratio", hole=0.3)
     st.plotly_chart(fig_pie, use_container_width=True)
+
+st.divider()
+st.subheader("📈 Daily Activity Trend")
+daily_activity = filtered_df.groupby('Date')['Value'].sum().reset_index()
+fig_line = px.line(daily_activity, x='Date', y='Value', markers=True, title="Activity Over Time")
+st.plotly_chart(fig_line, use_container_width=True)
