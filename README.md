@@ -1,5 +1,5 @@
-Thaweerat Yordsathien 6810110594
-
+# Thaweerat Yordsathien 6810110594
+dashboard project
 # 🎮 Discord Server Analytics Dashboard
 
 Dashboard สำหรับแสดงผลและวิเคราะห์ข้อมูลจำลองของกิจกรรมภายใน Discord Server พัฒนาด้วยภาษา Python โดยใช้ Streamlit และ Plotly
