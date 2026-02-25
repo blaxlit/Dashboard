@@ -17,3 +17,9 @@ with col1:
     user_counts = filtered_df.groupby('User')['Value'].sum().reset_index()
     fig_bar = px.bar(user_counts, x='User', y='Value', color='User', title="Activity by User")
     st.plotly_chart(fig_bar, use_container_width=True)
+
+with col2:
+    st.subheader("📊 Text vs Voice")
+    type_counts = filtered_df.groupby('Activity_Type').size().reset_index(name='Count')
+    fig_pie = px.pie(type_counts, names='Activity_Type', values='Count', title="Activity Type Ratio", hole=0.3)
+    st.plotly_chart(fig_pie, use_container_width=True)
