@@ -1,3 +1,4 @@
 streamlit
 pandas
 plotly
+# Core Data & UI Libraries
