@@ -26,6 +26,7 @@ with col2:
     type_counts = filtered_df.groupby('Activity_Type').size().reset_index(name='Count')
     fig_pie = px.pie(type_counts, names='Activity_Type', values='Count', title="Activity Type Ratio", hole=0.3)
     st.plotly_chart(fig_pie, use_container_width=True)
+    st.caption("เปรียบเทียบสัดส่วนระหว่าง Text และ Voice")
 
 st.divider()
 st.subheader("📈 Daily Activity Trend")
