@@ -9,6 +9,7 @@ st.title("🎮 Discord Server Analytics")
 st.sidebar.header("Filter Options")
 channel_list = df['Channel'].unique()
 selected_channel = st.sidebar.selectbox("เลือกห้อง (Channel)", channel_list)
+st.sidebar.divider()
 filtered_df = df[df['Channel'] == selected_channel]
 col1, col2 = st.columns(2)
 
