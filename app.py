@@ -19,6 +19,7 @@ with col1:
     user_counts = filtered_df.groupby('User')['Value'].sum().reset_index()
     fig_bar = px.bar(user_counts, x='User', y='Value', color='User', title="Activity by User")
     st.plotly_chart(fig_bar, use_container_width=True)
+    st.caption("จัดอันดับตามจำนวน Activity ทั้งหมด")
 
 with col2:
     st.subheader("📊 Text vs Voice")
